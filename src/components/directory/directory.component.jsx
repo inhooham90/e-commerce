@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './directory.styles.scss';
+import './directory.style.scss';
 
 import MenuItem from '../menu-item/menu-item.component';
 
