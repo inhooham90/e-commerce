@@ -21,4 +21,8 @@
   button {
     margin-top: auto;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
