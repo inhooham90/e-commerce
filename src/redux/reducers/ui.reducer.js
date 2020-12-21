@@ -1,7 +1,9 @@
 import { UIActionTypes } from "../actions/ui.action";
+import { addItemToCart } from "../utils/cart.utils";
 
 const INITIAL_STATE = {
-    cartView: false
+    cartView: false,
+    cartItems: []
 }; 
 
 const uIReducer  = (state = INITIAL_STATE, action) => {
@@ -10,6 +12,12 @@ const uIReducer  = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           cartView: !state.cartView,
+        };
+
+      case UIActionTypes.ADD_CART_ITEM:
+        return {
+          ...state,
+          cartItems: addItemToCart(state.cartItems, action.payload)
         };
 
       default:
